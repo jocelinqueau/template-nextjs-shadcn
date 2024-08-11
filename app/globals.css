@@ -82,4 +82,12 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .text-fl-3xs {
+    font-size: calc(var(--f-xs) * 0.8);
+  }
+
+  .text-fl-2xs {
+    font-size: calc(var(--f-xs) * 0.9);
+  }
 }
