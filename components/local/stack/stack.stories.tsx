@@ -1,8 +1,9 @@
 import { Meta, StoryFn } from "@storybook/react";
 
+import { gaps } from "@/components/shared/spacing";
 import Spacing from "@/components/utils/spacing/spacing";
 
-import Stack, { directions, gaps } from "./stack";
+import Stack, { directions } from "./stack";
 
 const meta: Meta<typeof Stack> = {
   title: "Components/Stack",

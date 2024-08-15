@@ -62,6 +62,10 @@ type TextColor = (typeof colors)[number];
 type TextWeight = (typeof weights)[number];
 type TextLineHeight = (typeof lineHeights)[number];
 
+export const getTextSize = (size: TextSize) => {
+  return sizesMap[size];
+};
+
 export interface TextProps {
   as?: TextAs;
   size?: TextSize;
@@ -91,6 +95,9 @@ const Text = ({
         colorsMap[color],
         className,
       )}
+      style={{
+        lineHeight: lineHeight && `${lineHeight}%`,
+      }}
     >
       {children}
     </Text>

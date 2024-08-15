@@ -22,3 +22,6 @@
   background-color: hsl(var(--background)) !important;
 }
 
+.sbdocs-content:has(>p){
+  color: hsl(var(--foreground)) !important;
+}

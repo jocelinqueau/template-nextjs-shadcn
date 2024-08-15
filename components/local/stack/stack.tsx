@@ -1,20 +1,8 @@
 import { ElementType, PropsWithChildren } from "react";
 
+import { StackGap } from "@/components/shared/spacing"
 import { cn } from "@/lib/utils";
 
-export const gaps = [
-  "2",
-  "4",
-  "3xs",
-  "2xs",
-  "xs",
-  "sm",
-  "md",
-  "lg",
-  "xl",
-  "2xl",
-  "3xl",
-] as const;
 export const directions = [
   "row",
   "column",
@@ -104,7 +92,6 @@ const columnGapMap = {
   "3xl": "gap-y-fl-3xl",
 };
 
-type StackGap = (typeof gaps)[number];
 type StackDirection = (typeof directions)[number];
 type StackAlign = (typeof align)[number];
 type StackJustify = (typeof justify)[number];

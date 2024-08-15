@@ -1,4 +1,5 @@
 import { PropsWithChildren } from "react";
+import Balancer from "react-wrap-balancer";
 
 import { colors, sizes } from "@/components/shared/typography";
 import { cn } from "@/lib/utils";
@@ -68,6 +69,7 @@ export interface HeadingProps {
   color?: HeadingColor;
   weight?: HeadingWeight;
   lineHeight?: HeadingLineHeight;
+  onClick?: () => void;
 }
 
 const Heading = ({
@@ -78,6 +80,7 @@ const Heading = ({
   weight = "semibold",
   lineHeight = "105",
   children,
+  onClick,
 }: PropsWithChildren<HeadingProps>) => {
   const Tag = as;
 
@@ -89,9 +92,14 @@ const Heading = ({
         sizesMap[size],
         lineHeightsMap[lineHeight],
         className,
+        onClick && "cursor-pointer",
       )}
+      style={{
+        lineHeight: lineHeight && `${lineHeight}%`,
+      }}
+      onClick={onClick}
     >
-      {children}
+      <Balancer>{children}</Balancer>
     </Tag>
   );
 };

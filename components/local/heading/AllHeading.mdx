@@ -2,6 +2,7 @@ import { Meta, Unstyled } from "@storybook/blocks";
 
 import Heading from './heading';
 import TypographySizer from "@/components/utils/typographicSizer";
+import { YStack } from "@/components/local/stack";
 
 <Meta title="Components/Heading/All" />
 
@@ -55,24 +56,20 @@ This story showcases all the heading sizes available in our design system.
 ## lineHeights
 
 <Unstyled>
-  <Heading lineHeight="105">
-  105: lorem ipsum dolor sit amet
-  </Heading>
-  <Heading lineHeight="110">
-  110: lorem ipsum dolor sit amet
-  </Heading>
-  <Heading lineHeight="120">
-  120: lorem ipsum dolor sit amet
-  </Heading>
+ <YStack gap="sm">
+   <Heading size="5" lineHeight="105">105: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</Heading>
+  <Heading size="5" lineHeight="110">110: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</Heading>
+  <Heading size="5" lineHeight="120">120: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</Heading>
+ </YStack>
 </Unstyled>
 
 ## Weight
 
 <Unstyled>
-  <Heading weight="regular">Regular</Heading>
-  <Heading weight="medium">Medium</Heading>
-  <Heading weight="semibold">Semibold</Heading>
-  <Heading weight="bold">Bold</Heading>
-  <Heading weight="extrabold">Extrabold</Heading>
-  <Heading weight="black">Black</Heading>
+  <Heading size="4" weight="regular">Regular</Heading>
+  <Heading size="4" weight="medium">Medium</Heading>
+  <Heading size="4" weight="semibold">Semibold</Heading>
+  <Heading size="4" weight="bold">Bold</Heading>
+  <Heading size="4" weight="extrabold">Extrabold</Heading>
+  <Heading size="4" weight="black">Black</Heading>
 </Unstyled>
